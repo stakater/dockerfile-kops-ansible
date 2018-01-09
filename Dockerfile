@@ -3,7 +3,7 @@ FROM williamyeh/ansible:alpine3
 RUN pip install boto
 
 RUN mkdir -p /aws && \
-    apk -Uuv add git openssh groff less python py-pip curl jq bash && \
+    apk -Uuv add git openssh groff less python py-pip curl jq bash make && \
     curl -LO --show-error https://github.com/kubernetes/kops/releases/download/1.7.1/kops-linux-amd64 && \
     mv kops-linux-amd64 /usr/local/bin/kops && \
     chmod +x /usr/local/bin/kops && \
